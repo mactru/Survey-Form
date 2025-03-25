@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1 id="title">Example Game Survey Form</h1>
+    <p id="description">Help us by filling this form out so we can create a better gaming experience and get a free in-game reward!</p>
+
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">
+          Enter Your Character Name: <input type="text" id="name" name="name" placeholder="John123" required>
+        </label>
+
+        <label id="email-label" for="email">
+          Enter Your Email: <input type="email" id="email" name="email" placeholder="john123@example.com" required>
+        </label>
+
+        <label id="number-label" for="number">
+          Enter Your Age: <input type="number" id="number" name="number" min="13" max="120" placeholder="optional">
+        </label>
+
+        <label for="dropdown">
+          Select Your Gender: 
+          <select id="dropdown" name="dropdown">
+            <option value="">Male</option>
+            <option value="1">Female</option>
+            <option value="2">Other</option>
+            <option value="3">Prefer not to answer</option>
+          </select>
+        </label> 
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Your Server (required)</legend>
+        <label for="na"><input id="na" class="inline" type="radio" name="server" checked value="1"> NA</label>
+        <label for="eu"><input id="eu" class="inline" type="radio" name="server" value="2"> EU</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>How is your experience in-game?</legend>
+        <label for="1"><input id="1" class="inline" type="radio" name="rating" value="1"> 1 (bad)</label>
+        <label for="2"><input id="2" class="inline" type="radio" name="rating" value="2"> 2</label>
+        <label for="3"><input id="3" class="inline" type="radio" name="rating" value="3"> 3</label>
+        <label for="4"><input id="4" class="inline" type="radio" name="rating" value="4"> 4</label>
+        <label for="5"><input id="5" class="inline" type="radio" name="rating" value="5"> 5 (good)</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>What would you like us to focus on?</legend>
+
+        <!--
+          asia = Asia Servers
+          aus = Australia Servers
+          nf = New Features
+          mc = More Customization
+         -->
+        <label for="asia"><input id="asia" class="inline" type="checkbox" value="1"> Asia Servers</label>
+        <label for="aus"><input id="aus" class="inline" type="checkbox" value="2"> Australia Servers</label>
+        <label for="graphics"><input id="graphics" class="inline" type="checkbox" value="3"> Update Graphics</label>
+        <label for="nf"><input id="nf" class="inline" type="checkbox" value="4"> New Features</label>
+        <label for="dlc"><input id="dlc" class="inline" type="checkbox" value="5"> DLC</label>
+        <label for="mc"><input id="mc" class="inline" type="checkbox" value="6"> More Customization</label>
+        <label for="wiki"><input id="wiki" class="inline" type="checkbox" value="7"> Wiki</label>
+        <label class="other" for="other">If you have any ideas not listed above feel free to explain below<textarea id="other" rows="3" cols="30" placeholder="Test">
+        </textarea></label>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </body>
+</html>
